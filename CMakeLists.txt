@@ -103,7 +103,7 @@ if(NOT asio_POPULATED AND NOT TARGET asio)
 
   # Configure ##
 
-  add_library(asio STATIC src/asio.cpp)
+  add_library(asio STATIC src/asio.cpp src/asio_ssl.cpp)
   add_library(asio::asio ALIAS asio)
   target_include_directories(
     asio PUBLIC $<BUILD_INTERFACE:${asio_SOURCE_DIR}/asio/include>
